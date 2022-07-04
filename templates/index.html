@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/input_type_upload_file.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/input_type_text.css') }}">
+</head>
+
+<body class="unselectable">
+    <form action="/">
+        <div id="input_text">
+            <input type="input" placeholder="Type Key Here..." class="input">
+            <input type="submit" value="" class="button">
+        </div>
+    </form>    
+
+    <form action="/" method="POST" enctype="multipart/form-data" id="upload">
+        <div class="drag-area" id="get-file" id="upload-form">
+            <img id="file-icon" src="{{ url_for('static', filename = 'svg/upload.svg') }}" />
+            <header>Drag & Drop to Upload File</header>
+            <span class="hideable">OR</span>
+            <button class="hideable">Browse File</button>
+            <input type="file" name="file-upload" id="upload-it" hidden>
+        </div>
+    </form>
+
+    <script src="{{ url_for('static', filename = 'js/input_file_feature.js') }}"></script>
+
+</body>
+
+</html>

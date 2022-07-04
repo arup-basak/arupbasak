@@ -1,0 +1,53 @@
+::placeholder {
+    size: larger;
+}
+
+.button {
+    font-size: large;
+    color: rgb(0, 0, 0);
+    background-color: #C689C6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.5s;
+
+    margin-left: -70px;
+    width: 50px;
+    background-color: inherit;
+
+    background: #C689C6 url('../svg/search.svg');
+    background-repeat: no-repeat;
+    height: 6vh;
+}
+
+.button:hover{
+    font-size: large;
+    background-color: #937DC2;
+}
+
+.button:active{
+    background-color: #937DC2;
+    padding: 9px;
+    margin: 3px;
+}
+
+.input {
+    outline: none;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 10px;
+    height: 100%;
+    padding-left: 18px;
+    width: 50%;
+
+    width: 200px;
+    height: 20px;
+    padding-right: 50px;
+}
+
+.input_text {
+    position: relative;
+    right: 100px;
+    height: 6vh;
+}

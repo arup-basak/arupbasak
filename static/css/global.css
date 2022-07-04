@@ -1,0 +1,23 @@
+/*
+937DC2
+C689C6
+E8A0BF
+FCC5C0
+*/
+
+@font-face { 
+    font-family: font; 
+    src: url('../fonts/regular.ttf'); 
+} 
+
+body {
+    background-color: #FCC5C0;
+    font-family: font;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
