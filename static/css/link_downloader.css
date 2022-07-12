@@ -18,11 +18,15 @@
     width: 800px;
 }
 
-.submit_button {
+#submit_button {
     height: 100%;
     border-radius: 25px;
     padding: 18px;
     font-size: 18px;
     border: 1px solid black;
+    cursor: pointer;
+}
 
+#submit_button:hover {
+    color: black;
 }

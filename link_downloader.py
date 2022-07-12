@@ -1,11 +1,18 @@
 from pytube import YouTube
 import os
 import shutil
+import library
 
 download_path = os.path.join('storage', 'temp')
 
 
-def find_link(link):
+def download(link):
+    yt = Youtube(link)
+    path = yt.download('360p', 'vid')
+    return path
+
+
+def find_link(link: object) -> str:
     temp = link
     if link[:8] == 'https://':
         temp = temp[8:]
@@ -95,15 +102,11 @@ class Youtube:
         elif vid_aud == 'aud':
             stream = stream.filter(abr=q).first()
         else:
-            return 0
+            return None
         stream.download()
         filename = stream.default_filename
         new_filename = filename.replace(' ', '_')
         os.rename(filename, new_filename)
         shutil.move(new_filename, os.path.join(download_path, new_filename))
-        return 1
-
-
-link = 'https://www.instagram.com/reel/Cf14kgNo-C5/?utm_source=ig_web_button_share_sheet'
-
-print(insta_find_link(link))
+        path = library.push_temp(new_filename)
+        return path
