@@ -8,11 +8,16 @@ app = Flask(__name__)
 
 @app.route('/download/<string:filename>')
 def download(filename):
-    path = os.path.join('storage', 'temp', filename)
-    try:
-        return send_file(library.get_temp(filename), as_attachment=True)
-    except:
+    path = library.get_temp(os.path.join('storage', 'temp', filename))
+    if path:
+        return send_file(path, as_attachment=True)
+    else:
         return 'File Code is Invalid'
+
+
+@app.route('/download/')
+def video_downloader():
+    return "Download Page"
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -26,9 +31,9 @@ def main():
     return render_template('index.html')
 
 
-@app.route('/download')
-def video_downloader():
-    return "Download Page"
+@app.route('/youtube_video_downloader/')
+def downloader():
+    return render_template('download_link_files.html')
 
 
 @app.errorhandler(404)
