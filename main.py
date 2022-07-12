@@ -17,13 +17,11 @@ def download(key):
         return 'File Code is Invalid'
 
 
-@app.route('/download', methods=['GET'])
+@app.route('/youtube_video_downloader/download/')
 def video_downloader():
     if request.method == "GET":
         youtube_link = request.args.get('link')
-        redirect(url_for('download/' + link_downloader.download(youtube_link)))
-
-        return "Download Page"
+        return redirect(url_for('download', key=link_downloader.download(youtube_link)))
 
 
 @app.route('/', methods=['GET', 'POST'])
