@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/global.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/input_type_upload_file.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/input_type_text.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="unselectable">
-    <form action="/">
-        <div id="input_text">
-            <input type="input" placeholder="Type Key Here..." class="input">
-            <input type="submit" value="" class="button">
-        </div>
-    </form>    
+    <div class="search_container">
+            <input
+              type="text"
+              class="search_input"
+              placeholder="Type YouTube video Link here..."
+            />
+            <button type="submit" class="search_button">
+              <i class="material-icons" id="search_icon">search</i>
+            </button>
+    </div>
 
     <form action="/" method="POST" enctype="multipart/form-data" id="upload">
         <div class="drag-area" id="get-file" id="upload-form">

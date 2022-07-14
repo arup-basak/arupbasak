@@ -1,32 +1,7 @@
-.container {
-    display: flex;
-    align-items: center;
-    margin:auto;
-    position: fixed;
-    top: 45%;
-    left: 21%;
-}
-
-#search_input {
-    height: 5vh;
-    border-radius: 25px;
-    outline: none;
-    border: 1px solid black;
-    padding: 5px;
-    padding-left: 18px;
-    font-size: 18px;
-    width: 800px;
-}
-
-#submit_button {
-    height: 100%;
-    border-radius: 25px;
-    padding: 18px;
-    font-size: 18px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-#submit_button:hover {
-    color: black;
+.wrap {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

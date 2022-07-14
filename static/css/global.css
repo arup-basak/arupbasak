@@ -1,9 +1,18 @@
 /*
-937DC2
-C689C6
-E8A0BF
+
+
+
 FCC5C0
 */
+
+:root {
+    --background: #FCC5C0;
+    --color1: #E8A0BF;
+    --color2: #C689C6;
+    --color3: #937DC2;
+    --white: #fff;
+    --black: #000;
+}
 
 @font-face { 
     font-family: font; 
@@ -11,7 +20,7 @@ FCC5C0
 } 
 
 body {
-    background-color: #FCC5C0;
+    background-color: var(--background);
     font-family: font;
 }
 
@@ -20,4 +29,45 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.search_container {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.search_input {
+  width: 100%;
+  border: 3px solid var(--color3);
+  border-right: none;
+  padding: 8px;
+  padding-left: 15px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: var(--color3);
+  font-size: 20px;
+}
+
+.search_input:focus {
+  color: var(--color3);
+}
+
+.search_button {
+  width: 62px;
+  height: 62px;
+  border: 1px solid var(--color3);
+  background: var(--color3);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#search_icon {
+    padding-top: 8px;
+    font-size: 32px;
+    color: var(--white);
 }
