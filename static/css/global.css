@@ -54,7 +54,7 @@ body {
   color: var(--color3);
 }
 
-.search_button {
+#search_button {
   width: 62px;
   height: 62px;
   border: 1px solid var(--color3);
